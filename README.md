@@ -9,21 +9,23 @@ and syncing/archiving process.
 * Krios1
     * Falcon Server (Primary Data Source)
         * `smb://czii-krios1-falcon/OffLoadData`
-    * Replicas
+    * LRU Run Caches
         * `czii-gpu-b-1:datapool/exports/local/instruments/czii.krios1`
             * Mounted locally at `/local/instruments/czii.krios1`
             * Mounted globally at `/hpc/nodes/czii-gpu-b-1/[TO-BE-DETERMINED]`
+    * OffloadData Replicas
         * `czii-st-a-1:fastpool/exports/hpc/instruments/czii.krios1`
             * Mounted globally at `/hpc/instruments/czii.krios1`
         * `bruno:/exa1/hpc/instruments/czii.krios1`
             * Mounted globally at `hpc/instruments/czii.krios1`
-    * Archive
+    * Archives
         * `czii-st-a-1:datapool/exports/hpc/archives/czii.krios1
             * Mounted globally at `/hpc/archives/czii.krios1`
         * `bruno:/exa1/hpc/archives/czii.krios1`
             * Mounted globally at `/hpc/archives/czii.krios1`
     * Deep Archive
-        * TO-BE-DETERMINED process for sending old runs to Deep Archive for disaster recovery and long term storage.
+	* TO-BE-DETERMINED process for sending old runs to Deep Archive for
+	  disaster recovery and long term storage.
 
 ## OffloadData Structure
 
