@@ -12,6 +12,9 @@
 INSTRUMENT=${BASH_REMATCH[2]}
 GROUP=${BASH_REMATCH[1]}
 
+STORAGEHOST=storage-r3-u19
+[[ $(hostname -s) == ${STORAGEHOST} ]] || die "This can only be ran on ${STORAGEHOST}"
+
 ##########################################################################
 # Root location where instrument data servers are mounted.
 SRCROOT=/datasources
@@ -100,7 +103,7 @@ function is_run () {
 
 # Paths
 srcpath=${SRCROOT}/${INSTRUMENT}
-dstpath=${DSTROOT}/${INSTRUMENT}
+dstpath=${DSTROOT}/${GROUP}.${INSTRUMENT}
 
 while true; do
   # Flush any lingering data from previous iteration
