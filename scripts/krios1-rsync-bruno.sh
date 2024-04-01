@@ -1,16 +1,17 @@
 #!/bin/bash -l
 
 # Author: griznog
-# Purpose: First drafts of data sync from Krios to storage.
+# Purpose: Maintain a near-real-time LRU cache of recent runs on the
+#          pre-processing server local scratch.
 
 SRC=/datasources/krios1
-DEST1_HOST=czii-gpu-b-1
-DEST1_PATH=/local/scratch/czii.krios1
-INTERVAL=10
+DEST1_HOST=TO-BE-DETERMINED
+DEST1_PATH=/datapool/exports/instruments/czii.krios1
+INTERVAL=60
 NEW_RUN_PERIOD=2 # In days, max age of things considered to be "new runs"
-NEW_RUN_PERIOD_FILE=/tmp/.NEW_RUN_PERIOD.krios1
-LRU_TTL=7 # In days, max age of things to leave in the cache.
-LRU_TTL_FILE=/tmp/.LRU_TTL.krios1
+NEW_RUN_PERIOD_FILE=/tmp/.NEW_RUN_PERIOD.krios1.${DEST1_HOST}
+LRU_TTL=14 # In days, max age of things to leave in the cache.
+LRU_TTL_FILE=/tmp/.LRU_TTL.krios1.${DEST1_HOST}
 
 die () {
   [[ -n $1 ]] && echo $1
