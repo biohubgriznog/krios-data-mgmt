@@ -19,7 +19,7 @@ and syncing/archiving process.
         * `bruno:/exa1/hpc/instruments/czii.krios1`
             * Mounted globally at `hpc/instruments/czii.krios1`
     * Archives
-        * `czii-st-a-1:datapool/exports/hpc/archives/czii.krios1
+        * `czii-st-a-1:datapool/exports/hpc/archives/czii.krios1`
             * Mounted globally at `/hpc/archives/czii.krios1`
         * `bruno:/exa1/hpc/archives/czii.krios1`
             * Mounted globally at `/hpc/archives/czii.krios1`
