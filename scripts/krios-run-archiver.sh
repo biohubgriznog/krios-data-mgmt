@@ -42,6 +42,7 @@ RUN_EXCLUDES=(
     serialem-data
     .athena
     ImagesForProcessing
+    exportData
   )
 
 
