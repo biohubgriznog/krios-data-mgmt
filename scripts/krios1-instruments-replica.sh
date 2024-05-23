@@ -1,7 +1,7 @@
 #!/bin/bash
 
 while true; do 
-  echo "Starting sync at $(date)"
+	echo "Starting replica sync ($0) at $(date)"
   if [[ -d /datasources/krios1/.athena ]]; then
     rsync -a \
   	  --info=progress2,stats2 \
@@ -11,7 +11,7 @@ while true; do
 	  --log-file=${HOME}/instrument-replica-sync.log \
 	  /datasources/krios1/ \
 	  /datapool/exports/hpc/instruments/czii.krios1/OffloadData 
-    echo "Sync completeds at $(date)"
+    echo "Sync completed at $(date)"
     sleep 5m
   else
     echo "Problem wtih /datasources/krios1, waiting 1 hour betfore retrying."
