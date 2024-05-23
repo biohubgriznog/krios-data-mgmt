@@ -3,6 +3,9 @@
 # Author: griznog
 # Purpose: First drafts of data sync from Krios to storage.
 
+echo "DEPRECATED: we no longer maintain an LRU cache."
+exit 1
+
 # We need to use evn_parallel.
 . env_parallel.bash
 
